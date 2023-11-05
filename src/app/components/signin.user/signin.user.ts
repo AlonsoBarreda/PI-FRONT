@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserSigninRequest } from 'src/app/dtos/userSigninRequest.dto';
+import { UserSignInRequest } from 'src/app/dtos/UserSignInRequest.dto';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./signin.user.css']
 })
 export class SigninUserComponent {
-  userSigninRequest: UserSigninRequest = {
+  userSignInRequest: UserSignInRequest = {
 	  userLogin: "",
 	  passwordLogin: ""
   };
@@ -18,11 +18,13 @@ export class SigninUserComponent {
   }
 
   signInn(){
-    this.authService.signIn(this.userSigninRequest).subscribe(
+    this.authService.signIn(this.userSignInRequest).subscribe(
       x => {
         alert(x.message)
       }
     );
+    /*console.log(this.userSignInRequest.passwordLogin)
+    console.log(this.userSignInRequest.userLogin)*/
   }
 
 }

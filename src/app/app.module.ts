@@ -8,10 +8,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { UpdateLenderBoss } from './components/update.lenderboss/update.lenderboss';
 import { InsertLenderBoss } from './components/insert.lenderboss/insert.lenderboss';
+import { AppMaterialModule } from './app.material.module';
+import { Home } from './components/home/home';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
+    Home,
     SigninUserComponent,
     UpdateLenderBoss,
     InsertLenderBoss
@@ -22,7 +26,9 @@ import { InsertLenderBoss } from './components/insert.lenderboss/insert.lenderbo
     FormsModule,
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
     ApplicationModule,
-    CommonModule
+    CommonModule,
+    AppMaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

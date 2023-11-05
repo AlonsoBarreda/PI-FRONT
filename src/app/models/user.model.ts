@@ -13,6 +13,7 @@ export class User{
     userLogin?: string;
     passwordLogin?: string;
     dateBirth?: Date | null;
+    numberDoc?: string;
     idDocType?: DocumentType;
     idRole?: Role;
 }

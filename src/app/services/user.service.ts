@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { AppSettings } from "../app.settings";
-import { UserSigninRequest } from "../dtos/userSigninRequest.dto";
+import { UserSignInRequest } from "../dtos/UserSignInRequest.dto";
 import { User } from "../models/user.model";
 
 const adminUrl = `${AppSettings.API_ENDPOINT}/admin`;
