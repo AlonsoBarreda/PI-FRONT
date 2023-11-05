@@ -1,5 +1,5 @@
 export class AppSettings {
 
-    public static API_ENDPOINT='http://localhost:8090/url';
+    public static API_ENDPOINT='http://localhost:8080/api/v0.1';
 
  }
