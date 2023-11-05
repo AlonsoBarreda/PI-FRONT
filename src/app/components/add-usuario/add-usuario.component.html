@@ -1,0 +1,103 @@
+<app-menu></app-menu>
+<div class="container">
+                <div class="row">
+                        <mat-toolbar color="primary" >    
+                        <span>Actualiza Usuario</span>    
+                        </mat-toolbar>  
+                </div>
+
+                <div class="row" style="margin-top: 3%">
+                        <div class="col-lg-6">
+                            <label for="namesUser">Nombre</label>
+                            <input type="text" class="form-control" name="namesUser" id="namesUser" [(ngModel)]="objUser.namesUser"/>
+                        </div>                                            
+                 </div>
+
+                 <div class="row" style="margin-top: 3%">
+                        <div class="col-lg-3">
+                                <label for="lastnameP">Apellidos Paterno</label>
+                                <input type="text" class="form-control" name="lastnameP" id="lastnameP"  [(ngModel)]="objUser.lastnameP"/>
+                            </div>
+                </div>
+                <div class="row" style="margin-top: 3%">
+                    <div class="col-lg-3">
+                            <label for="lastnameM">Apellidos Materno</label>
+                            <input type="text" class="form-control" name="lastnameM" id="lastnameM"  [(ngModel)]="objUser.lastnameM"/>
+                        </div>
+            </div>
+
+                 <div class="row" style="margin-top: 3%">
+                        <div class="col-lg-3">
+                                <label for="registrationDate">Fecha de Registro</label>
+                                     <input type="date" class="form-control" name="registrationDate" id="registrationDate"  [(ngModel)]="objUser.registrationDate"/>
+                        </div>
+                </div>
+                       
+                <div class="row" style="margin-top: 3%">
+                         <div class="col-lg-3">
+                                <label for="address">Direccion</label>
+                                         <input type="text"  class="form-control" id="address"  name="telefono"  [(ngModel)]="objUser.address"/>
+                         </div>
+                 </div>
+
+                 <div class="row" style="margin-top: 3%">
+                    <div class="col-lg-3">
+                           <label for="cellphone">Celular</label>
+                                    <input type="number"  class="form-control" id="cellphone"  name="cellphone"  [(ngModel)]="objUser.cellphone"/>
+                    </div>
+            </div>
+            <div class="row" style="margin-top: 3%">
+                <div class="col-lg-3">
+                       <label for="email">Correo</label>
+                                <input type="text"  class="form-control" id="email"  name="email"  [(ngModel)]="objUser.email"/>
+                </div>
+        </div>
+        <div class="row" style="margin-top: 3%">
+            <div class="col-lg-3">
+                   <label for="userLogin">Usuario</label>
+                            <input type="text"  class="form-control" id="userLogin"  name="userLogin"  [(ngModel)]="objUser.userLogin"/>
+            </div>
+    </div>
+    <div class="row" style="margin-top: 3%">
+        <div class="col-lg-3">
+               <label for="passwordLogin">Contraseña</label>
+                        <input type="text"  class="form-control" id="passwordLogin"  name="passwordLogin"  [(ngModel)]="objUser.passwordLogin"/>
+        </div>
+</div>
+<div class="row" style="margin-top: 3%">
+    <div class="col-lg-3">
+           <label for="dateBirth">Fecha de Nacimiento </label>
+                    <input type="text"  class="form-control" id="dateBirth"  name="dateBirth"  [(ngModel)]="objUser.dateBirth"/>
+    </div>
+</div>
+                <div class="row" style="margin-top: 3%">
+                        <div class="col-lg-3">
+                                <label for="TipoDocument">Pais</label>      
+                                <select  id="TipoDocument" name="TipoDocument" class="form-control" [(ngModel)]="objAutor.TipoDocument!.id">
+                                    <option value="-1"> [Seleccione] </option>   
+                                    <option *ngFor="let x of lstTipDoc" value="{{ x.id }}">
+                                        {{ x.numberDoc }}
+                                    </option> 
+                                </select>
+                            </div>
+                
+                </div>
+
+             <!-- <div class="row" style="margin-top: 3%">
+                        <div class="col-lg-3">
+                                <label for="grado">Grado</label>      
+                                <select  id="grado" name="grado" class="form-control"  [(ngModel)]="objAutor.grado!.idDataCatalogo">
+                                    <option value="-1"> [Seleccione] </option>   
+                                    <option *ngFor="let x of lstGrado" value="{{ x.idDataCatalogo }}">
+                                        {{ x.descripcion }}
+                                    </option> 
+                                </select>
+                            </div>-->
+                
+                </div>           
+                    
+                <div  class="row" >
+                    <button mat-raised-button type="submit" color="primary" (click)="actualiza()">Actualizar</button>
+                </div>
+
+</div>
